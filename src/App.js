@@ -1,16 +1,16 @@
 import img from './image/wave.png'
-import BasicCard from './components/BasicCard';
+import {BasicCard} from './components/BasicCard';
 import './App.css';
 
 function App() {
   return (
-    <div >
-    <div className='wave'>
-      <img style={{width: '1600px'}} src={img} alt="gshs"/>
-    </div>
-
-    <BasicCard />
-
+    <div className='home'>
+      <div className='wave'>
+        <img style={{ width: '1600px', height: '100%' }} src={img} alt="gshs" />
+      </div>
+      <div className='card'>
+        <BasicCard />
+      </div>
     </div>
 
 
