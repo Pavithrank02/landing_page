@@ -14,9 +14,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm install @mui/material @emotion/react @emotion/styled`
+Run the following commands to add Material UI to your project.
 
-Run one of the following commands to add Material UI to your project:
+### `npm install @mui/material @emotion/react @emotion/styled`
+### `npm install @mui/material @mui/styled-engine-sc styled-components`
+### `npm install @mui/icons-material`
+
+
 
 ## Learn More
 
