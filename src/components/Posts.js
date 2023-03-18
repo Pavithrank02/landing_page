@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Header from './Header'
 import Sidebar from './Sidebar'
 import './Home.css'
-import Header from './Header'
 import Body from './Body'
 
-
-const Home = () => {
+const Posts = () => {
   return (
     <div className='user-info-container'>
       <div className='sidebar'>
@@ -15,9 +13,11 @@ const Home = () => {
       <div className='header'>
         <Header />
       </div>
-      
+      <div>
+      <Body />
+      </div>
     </div>
   )
 }
 
-export default Home
+export default Posts
