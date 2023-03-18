@@ -109,3 +109,12 @@
   left: 60vh;
   bottom: 0;
 }
+
+.logout{
+  display: flex;
+  position: absolute;
+  height: 50vh;
+  width: 0vw;
+  top: 15vh;
+  left: 75vw;
+}
