@@ -14,13 +14,12 @@
   margin-top: 100px;
 }
 
-
 .content li{
   padding: 20px;
   color: white;
   border-bottom: 2px solid gray;
   width: 150px;
-  margin-left: -30px;
+  margin-left: 0px;
 }
 .sidebar-container{
   display: flex;
@@ -38,7 +37,7 @@
 .header{
   margin-top: 20px;
   margin-left: 20px;
-  width: 70vw;
+  width: 75vw;
 }
 .text{
   font-size: 23px;
@@ -75,4 +74,27 @@
   bottom: 0;
 
 
+}
+.chat{
+  bottom: 0;
+}
+
+.accord{
+  display: 'flex';
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.info{
+  display: flex;
+  position: absolute;
+  top: 23vh;
+  left: 25vw;
+}
+
+.left{
+  border-right: 1px solid rgb(182, 176, 176);
+  height: 75vh;
+  width: 25vw;
 }

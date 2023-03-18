@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
@@ -6,7 +6,9 @@ import UsersList from './UsersList'
 import img from '../image/wave.png'
 import './Basiccard.css'
 
-export const BasicCard = () => {
+export const BasicCard = (props) => {
+
+  // const [id, setID] = useState("")
   return (
     <div className='home'>
       <div className='wave'>

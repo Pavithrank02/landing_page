@@ -37,7 +37,7 @@ const Header = () => {
     setAnchorElUser(null);
   };
   return (
-    <AppBar position='static' color='transparent' style={{ }} elevation={1}>
+    <AppBar position='static' color='transparent' elevation={1}>
     <Container maxWidth="xl">
       <Toolbar disableGutters>
         <Typography
@@ -63,7 +63,7 @@ const Header = () => {
 
         <Box sx={{ flexGrow: 0 }} >
           <Tooltip title="Profile">
-            <IconButton onClick={handleOpenUserMenu} sx={{ mt: -5, ml: '50vw'}}>
+            <IconButton onClick={handleOpenUserMenu} sx={{ mt: -5, ml: '55vw'}}>
               <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
             </IconButton>
           </Tooltip>
