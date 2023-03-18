@@ -1,17 +1,16 @@
-import img from './image/wave.png'
+
 import {BasicCard} from './components/BasicCard';
 import './App.css';
+import { Route, Routes } from 'react-router';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div className='home'>
-      <div className='wave'>
-        <img style={{ width: '1600px', height: '100%' }} src={img} alt="gshs" />
-      </div>
-      <div className='card'>
-        <BasicCard />
-      </div>
-    </div>
+    
+        <Routes>
+        <Route path="/" element={<BasicCard />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
 
 
   );

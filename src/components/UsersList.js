@@ -12,21 +12,22 @@ export default function UsersList() {
 
   const [users, setUser] = useState("");
 
-  console.log(users)
+  // console.log(users)
 
 
   const fetchAPI = async () => {
     const data = await fetch(FETCHAPI);
     const res = await data.json()
+    console.log(res)
     setUser(res)
   }
   useEffect(() => {
     fetchAPI()
-  }, [fetchAPI])
+  }, [])
 
   return (
     <div>
-      {users.users.map((user) => <List sx={{ width: '100%', minWidth: 560, bgcolor: 'background.paper' }}>
+      {users && users.users.map((user) => <List sx={{ width: '100%', minWidth: 560, bgcolor: 'background.paper' }}>
 
         <ListItem alignItems="flex-start">
           <ListItemAvatar>

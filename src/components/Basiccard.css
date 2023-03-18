@@ -1,6 +1,29 @@
-*{
+/* *{
   -ms-overflow-style: none;
 }
 ::-webkit-scrollbar {
   display: none;
+} */
+* {
+  margin: 0;
+  padding: 0;
 }
+.home{
+  display: flex;
+}
+
+.card{
+  display: flex;
+  position: absolute;
+  left: 30%;
+  top: 18%;
+  height: 50vh;
+  width: 100px;
+}
+
+
+.wave {
+  position: fixed;
+  width: 100vw;
+}
+
