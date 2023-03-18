@@ -1,9 +1,8 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import './Home.css'
 import Header from './Header'
-import Body from './Body'
+import Chatbot from './Chatbot'
 
 
 const Home = () => {
@@ -14,6 +13,9 @@ const Home = () => {
       </div>
       <div className='header'>
         <Header />
+      </div>
+      <div>
+        <Chatbot />
       </div>
       
     </div>
