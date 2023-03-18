@@ -28,7 +28,7 @@ const Header = () => {
 
   }
 
-  if (toggle === false) {
+  if (toggle === true) {
     return (
       <div>
         <div>

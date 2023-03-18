@@ -102,6 +102,8 @@
   width: 25vw;
 }
 .right{
+  display: flex;
+  flex-direction: column;
   height: 75vh;
   width: 25vw;
   position: absolute;
@@ -113,8 +115,24 @@
 .logout{
   display: flex;
   position: absolute;
-  height: 50vh;
+  height: 70vh;
   width: 0vw;
   top: 15vh;
   left: 75vw;
+}
+ .li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: fit-content;
+  padding: 20px;
+  margin: 5px;
+  border-bottom: 1px solid rgb(204, 201, 201);
+  font-size: x-large;
+  font-style: bold;
+  color: rgb(122, 122, 122);
+}
+.list {
+  padding: 5px;
 }

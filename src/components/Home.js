@@ -9,7 +9,7 @@ import UsersList from './UsersList'
 
 const Home = (props) => {
   const user = UsersList()
-  console.log("home", user);
+  // console.log("home", user);
   return (
     <div className='user-info-container'>
       <div className='sidebar'>
