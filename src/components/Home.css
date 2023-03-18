@@ -88,13 +88,24 @@
 
 .info{
   display: flex;
+  flex-direction: row;
   position: absolute;
   top: 23vh;
   left: 25vw;
 }
 
 .left{
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid rgb(182, 176, 176);
   height: 75vh;
   width: 25vw;
+}
+.right{
+  height: 75vh;
+  width: 25vw;
+  position: absolute;
+  top: 0%;
+  left: 60vh;
+  bottom: 0;
 }
