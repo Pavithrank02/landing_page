@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 export default function UsersList() {
 
   const [users, setUser] = useState("");
-  const [id, setId] = useState("");
+  // const [id, setId] = useState("");
   const navigate = useNavigate ();
 
   console.log(users);
@@ -52,7 +52,7 @@ navigate(`/home/${id}`)
                       variant="h5"
                       color="text.primary"
                       onClick={() => {
-                        setId(user.id)
+                        // setId(user.id)
                         handleSubmit(user.id)
                       }
                         
