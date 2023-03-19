@@ -6,12 +6,15 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
+import { useNavigate } from 'react-router-dom';
 import { FETCHAPI } from '../Constants';
 import { Link } from 'react-router-dom';
 
 export default function UsersList() {
 
   const [users, setUser] = useState("");
+  const [id, setId] = useState("");
+  const navigate = useNavigate ();
 
   console.log(users);
 
@@ -25,14 +28,15 @@ export default function UsersList() {
   useEffect(() => {
     fetchAPI()
   }, [])
+  const handleSubmit = (id) => {
+navigate(`/home/${id}`)
+  }
 
   return (
     <div>
       {users && users.users.map((user) =>
           
           <List sx={{ width: '100%', minWidth: 560, bgcolor: 'background.paper' }}>
-        <Link to='/home'>
-
 
             <ListItem alignItems="flex-start">
               <ListItemAvatar>
@@ -47,6 +51,12 @@ export default function UsersList() {
                       component="span"
                       variant="h5"
                       color="text.primary"
+                      onClick={() => {
+                        setId(user.id)
+                        handleSubmit(user.id)
+                      }
+                        
+                      }
                     >
                       {user.name}
                     </Typography>
@@ -55,7 +65,6 @@ export default function UsersList() {
               />
             </ListItem>
             <Divider variant="inset" component="li" />
-            </Link>
           </List>
 
       )}

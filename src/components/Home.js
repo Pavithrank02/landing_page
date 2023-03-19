@@ -4,11 +4,12 @@ import './Home.css'
 import Header from './Header'
 import Chatbot from './Chatbot'
 import UserInfo from './UserInfo'
-import UsersList from './UsersList'
+import { useParams } from "react-router-dom";
 
 
 const Home = (props) => {
-  const user = UsersList()
+  const  userId  = useParams();
+  console.log("id", userId)
   // console.log("home", user);
   return (
     <div className='user-info-container'>
@@ -19,7 +20,7 @@ const Home = (props) => {
         <Header />
       </div>
       <div className='info'>
-        <UserInfo />
+        <UserInfo id={userId}/>
       </div>
       <div className='chat'>
         <Chatbot />

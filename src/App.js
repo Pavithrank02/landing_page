@@ -11,7 +11,7 @@ function App() {
     
         <Routes>
         <Route path="/" element={<BasicCard />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/home/:id" element={<Home />} />
           <Route path="/post" element={<Posts />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/todo" element={<Gallery />} />

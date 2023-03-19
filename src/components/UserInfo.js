@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import Avatar from '@mui/material/Avatar';
-import useAPI from './useAPI';
 import img1 from '../image/map.PNG'
+import useAPI from './useAPI';
 import './Home.css'
 import zIndex from '@mui/material/styles/zIndex';
 
-const UserInfo = () => {
+const UserInfo = (props) => {
 
-  const user = useAPI()
-  // console.log("info",user.props);
+  // console.log("props",props);
+  const {id}  = props.id
+  const user = useAPI({id})
+  console.log("user", id)
+  // const userID = user.users.map(u => {
+  //   return u.id
+  // })
+
+  // const result = userID.find(element => {
+  //   return element === id ;
+  // });
+
+  // console.log(result)
+
 
 
   return (
@@ -17,7 +29,7 @@ const UserInfo = () => {
         <Avatar alt="Remy Sharp" style={{ height: '220px', width: '220px' }} sx={{ ml: '50px' }} />
         {/* <p> {name}</p> */}
         <ul className='li'>
-          <l1 className='list'>Username :</l1>
+          <l1 className='list'>Username : {}</l1>
           <l1 className='list'>email :</l1>
           <l1 className='list'>Phone :</l1>
           <l1 className='list'>Website :</l1>

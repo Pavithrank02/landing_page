@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FETCHAPI } from '../Constants';
 
-const useAPI = () => {
+const useAPI = (id) => {
 
   const [users, setUser] = useState("");
 
