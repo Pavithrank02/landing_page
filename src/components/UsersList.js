@@ -14,7 +14,7 @@ export default function UsersList() {
 
   const [users, setUser] = useState("");
   // const [id, setId] = useState("");
-  const navigate = useNavigate ();
+  const navigate = useNavigate();
 
   console.log(users);
 
@@ -22,51 +22,49 @@ export default function UsersList() {
   const fetchAPI = async () => {
     const data = await fetch(FETCHAPI);
     const res = await data.json()
-    console.log(res)
+    // console.log(res)
     setUser(res)
   }
   useEffect(() => {
     fetchAPI()
   }, [])
   const handleSubmit = (id) => {
-navigate(`/home/${id}`)
+    navigate(`/home/${id}`)
   }
 
   return (
     <div>
       {users && users.users.map((user) =>
-          
-          <List sx={{ width: '100%', minWidth: 560, bgcolor: 'background.paper' }}>
 
-            <ListItem alignItems="flex-start">
-              <ListItemAvatar>
-                <Avatar alt="Remy Sharp" src={user.profilepicture
-                } />
-              </ListItemAvatar>
-              <ListItemText
-                primary={
-                  <React.Fragment>
-                    <Typography
-                      sx={{ display: 'inline' }}
-                      component="span"
-                      variant="h5"
-                      color="text.primary"
-                      onClick={() => {
-                        // setId(user.id)
-                        handleSubmit(user.id)
-                      }
-                        
-                      }
-                    >
-                      {user.name}
-                    </Typography>
-                  </React.Fragment>
-                }
-              />
-            </ListItem>
-            <Divider variant="inset" component="li" />
-          </List>
+        <List sx={{ width: '100%', minWidth: 560, bgcolor: 'background.paper' }}>
 
+          <ListItem alignItems="flex-start">
+            <ListItemAvatar>
+              <Avatar alt="Remy Sharp" src={user.profilepicture} />
+            </ListItemAvatar>
+            <ListItemText
+              primary={
+                <React.Fragment>
+                  <Typography
+                    sx={{ display: 'inline' }}
+                    component="span"
+                    variant="h5"
+                    color="text.primary"
+                    onClick={() => {
+                      // setId(user.id)
+                      handleSubmit(user.id)
+                    }
+
+                    }
+                  >
+                    {user.name}
+                  </Typography>
+                </React.Fragment>
+              }
+            />
+          </ListItem>
+          <Divider variant="inset" component="li" />
+        </List>
       )}
 
     </div>
